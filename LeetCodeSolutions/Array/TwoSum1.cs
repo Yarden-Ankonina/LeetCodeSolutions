@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 
 namespace LeetCodeSolutions.Array
 {
@@ -13,15 +15,14 @@ namespace LeetCodeSolutions.Array
             arr.Add(11);
             arr.Add(5);
             int target = 9;
-            int[] res = TwoSumBrutal(arr.ToArray(),target);
+            //int[] res = TwoSumBrutal(arr.ToArray(),target);
+            //int[] res = twoSumHash(arr.ToArray(), target);
+            int[] res = twoSumHashOnce(arr.ToArray(), target);
+
             string msg = string.Format("[{0},{1}]", res[0], res[1]);
             Console.WriteLine(msg);
-            int[] resHash = twoSumHash(arr.ToArray(), target);
 
         }
-
-      
-
 
         private int[] TwoSumBrutal(int[] nums, int target)
         {
@@ -45,17 +46,62 @@ namespace LeetCodeSolutions.Array
 
         //Time = O(N^2)
         //Space = O(1)
+
+
         private int[] twoSumHash(int[] i_ToArray, int i_Target)
         {
             List<int> res = new List<int>();
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            for (int i = 0; i < i_ToArray.Length; i++)
+            {
+                dict.Add(i_ToArray[i],i);
+            }
+
+            for (int i = 0; i < i_ToArray.Length; i++)
+            {
+                int complement = i_Target - i_ToArray[i];
+                if (dict.ContainsKey(complement) && dict[complement] != i)
+                {
+                    res.Add(i);
+                    res.Add(i_ToArray[i]);
+                    break;
+                }
+            }
+            return res.ToArray();
+
+            //Time = O(n)
+            //Space = O(n)
+
+        }
+
+        private int[] twoSumHashOnce(int[] i_ToArray, int i_Target)
+        {
+            List<int> res = new List<int>();
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            for (int i = 0; i < i_ToArray.Length; i++)
+            {
+                int complement = i_Target - i_ToArray[i];
+                if (dict.ContainsKey(complement))
+                {
+                    res.Add(dict[complement]);
+                    res.Add(i);
+                    break;
+                }
+                dict.Add(i_ToArray[i], i);
+            }
 
             return res.ToArray();
         }
+
+
+
+        //Time = O(n)
+        //Table - O(1)
+        //Space = O(n)
+
+    }
     }
    
-}
-        
-
 
 
 /*
