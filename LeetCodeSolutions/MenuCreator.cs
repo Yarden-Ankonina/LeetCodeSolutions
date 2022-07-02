@@ -17,16 +17,23 @@ namespace LeetCodeSolutions
             MenuItem problems = new MenuItem("Problems");
 
             MenuItem arrays = new MenuItem("Arrays");
+            MenuItem twoSumBrute = new MenuItem("1_TwoSum", _1_TwoSum.TestBrute);
+
             MenuItem runningSum = new MenuItem("1480_RunningSum", _1480_RunningSum.Test);
-            MenuItem containDuplicate = new MenuItem("217_ContainsDuplicates", _217_ContainsDuplicates.TestBruteForce);
+            MenuItem containDuplicate = new MenuItem("217_ContainsDuplicates - Brute", _217_ContainsDuplicates.TestBruteForce);
+            MenuItem containDuplicateSorting = new MenuItem("217_ContainsDuplicates - Sort", _217_ContainsDuplicates.TestSort);
+
 
             MenuItem hash = new MenuItem("Hash");
+            MenuItem twoSumHash = new MenuItem("1_TwoSum", _1_TwoSum.TestHash);
 
             //MenuItem settings = new MenuItem("Settings");
             //MenuItem changeDefaultIntArray = new MenuItem("Change Default Int Array?", MenuSettings.changeDefaultIntArray);
             //settings.AddSubMenu(changeDefaultIntArray);
 
-            arrays.AddSubMenu(runningSum, containDuplicate);
+            arrays.AddSubMenu(twoSumBrute, runningSum,
+                containDuplicate, containDuplicateSorting);
+            hash.AddSubMenu(twoSumHash);
             problems.AddSubMenu(arrays, hash);
             menu.AddSubMenu(problems/*setting*/);
             menu.Show();

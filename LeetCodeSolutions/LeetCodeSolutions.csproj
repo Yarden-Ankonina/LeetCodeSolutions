@@ -39,12 +39,13 @@
     <Compile Include="Arrays\217_ContainsDuplicates.cs" />
     <Compile Include="Arrays\ArrayFunctions.cs" />
     <Compile Include="Arrays\1480_RunningSum.cs" />
-    <Compile Include="Arrays\TwoSum1.cs" />
+    <Compile Include="Arrays\1_TwoSum.cs" />
     <Compile Include="eProblemTypes.cs" />
     <Compile Include="MenuCreator.cs" />
     <Compile Include="MenuSettings.cs" />
     <Compile Include="ProblemData.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Sorting\MergeSort.cs" />
     <Compile Include="UserInput.cs" />
   </ItemGroup>
   <ItemGroup>

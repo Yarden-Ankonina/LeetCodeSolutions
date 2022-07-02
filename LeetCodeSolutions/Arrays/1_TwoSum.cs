@@ -1,29 +1,44 @@
-﻿using System;
+﻿using LeetCodeSolutions.Arrays;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace LeetCodeSolutions.Array
+namespace LeetCodeSolutions.Arrays
 {
-    public class TwoSum1
+    public static class _1_TwoSum
     {
-        public void Run()
+        public static void TestBrute()
         {
-            List<int> arr = new List<int>();
-            arr.Add(4);
-            arr.Add(7);
-            arr.Add(11);
-            arr.Add(5);
             int target = 9;
+            List<int> nums = new List<int>() { 4, 7, 11, 5 };
+            
+            Console.WriteLine("Original Array :");
+            ArrayFunctions.print1DArray(nums.ToArray());
+            Console.WriteLine("Target :" + target);
+            Console.WriteLine("Solution:");
+            ArrayFunctions.print1DArray(TwoSumBrute(nums.ToArray(), target));
+            
             //int[] res = TwoSumBrutal(arr.ToArray(),target);
             //int[] res = twoSumHash(arr.ToArray(), target);
-            int[] res = twoSumHashOnce(arr.ToArray(), target);
-
-            string msg = string.Format("[{0},{1}]", res[0], res[1]);
-            Console.WriteLine(msg);
-
         }
 
-        private int[] TwoSumBrutal(int[] nums, int target)
+        public static void TestHash()
+        {
+            int target = 9;
+            List<int> nums = new List<int>() { 4, 7, 11, 5 };
+
+            Console.WriteLine("Original Array :");
+            ArrayFunctions.print1DArray(nums.ToArray());
+            Console.WriteLine("Target :" + target);
+            Console.WriteLine("Solution:");
+            ArrayFunctions.print1DArray(twoSumHashOnce(nums.ToArray(), target));
+
+            //int[] res = TwoSumBrutal(arr.ToArray(),target);
+            //int[] res = twoSumHash(arr.ToArray(), target);
+        }
+
+
+        private static int[] TwoSumBrute(int[] nums, int target)
         {
             List<int> res = new List<int>();
             for (int i = 0; i < nums.Length; i++)
@@ -47,7 +62,7 @@ namespace LeetCodeSolutions.Array
         //Space = O(1)
 
 
-        private int[] twoSumHash(int[] i_ToArray, int i_Target)
+        private static int[] twoSumHash(int[] i_ToArray, int i_Target)
         {
             List<int> res = new List<int>();
             Dictionary<int, int> dict = new Dictionary<int, int>();
@@ -73,7 +88,7 @@ namespace LeetCodeSolutions.Array
 
         }
 
-        private int[] twoSumHashOnce(int[] i_ToArray, int i_Target)
+        private static int[] twoSumHashOnce(int[] i_ToArray, int i_Target)
         {
             List<int> res = new List<int>();
             Dictionary<int, int> dict = new Dictionary<int, int>();

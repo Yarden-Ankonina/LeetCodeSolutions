@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCodeSolutions.Sorting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,6 @@ namespace LeetCodeSolutions.Arrays
 {
     public static class ArrayFunctions
     {
-
         public static void print1DArray<T>(T[] arr)
         {
             StringBuilder res = new StringBuilder();
@@ -21,5 +21,6 @@ namespace LeetCodeSolutions.Arrays
             res.Append("]");
             Console.WriteLine(res.ToString());
         }
+
     }
 }
