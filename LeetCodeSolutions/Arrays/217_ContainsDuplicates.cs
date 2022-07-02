@@ -63,17 +63,21 @@ namespace LeetCodeSolutions.Arrays
         public static bool ContainsDuplicatesHashSet(int[] nums)
         {
             bool isAtLeastTwice = false;
+
+            HashSet<int> hashSet = new HashSet<int>();
             for (int i = 0; i < nums.Length; i++)
             {
-                for (int j = i + 1; j < nums.Length; j++)
+                if (!hashSet.Contains(nums[i]))
                 {
-                    if (nums[i] == nums[j])
-                    {
-                        isAtLeastTwice = true;
-                        break;
-                    }
+                    hashSet.Add(nums[i]);
+                }
+                else
+                {
+                    isAtLeastTwice = true;
+                    break;
                 }
             }
+
             return isAtLeastTwice;
 
         }
@@ -94,6 +98,15 @@ namespace LeetCodeSolutions.Arrays
             ArrayFunctions.print1DArray(nums.ToArray());
             Console.WriteLine("Solution:");
             Console.WriteLine(ContainsDuplicatesSorting(nums.ToArray()));
+        }
+
+        public static void TestHash()
+        {
+            List<int> nums = new List<int>() { 1, 2, 3, 7, 3, 4, 5, 6 };
+            Console.WriteLine("Original Array :");
+            ArrayFunctions.print1DArray(nums.ToArray());
+            Console.WriteLine("Solution:");
+            Console.WriteLine(ContainsDuplicatesHashSet(nums.ToArray()));
         }
 
     }

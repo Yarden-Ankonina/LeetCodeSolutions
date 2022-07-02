@@ -26,6 +26,8 @@ namespace LeetCodeSolutions
 
             MenuItem hash = new MenuItem("Hash");
             MenuItem twoSumHash = new MenuItem("1_TwoSum", _1_TwoSum.TestHash);
+            MenuItem containDuplicateHash = new MenuItem("217_ContainsDuplicates - Hash", _217_ContainsDuplicates.TestHash);
+
 
             //MenuItem settings = new MenuItem("Settings");
             //MenuItem changeDefaultIntArray = new MenuItem("Change Default Int Array?", MenuSettings.changeDefaultIntArray);
@@ -33,7 +35,9 @@ namespace LeetCodeSolutions
 
             arrays.AddSubMenu(twoSumBrute, runningSum,
                 containDuplicate, containDuplicateSorting);
-            hash.AddSubMenu(twoSumHash);
+
+            hash.AddSubMenu(twoSumHash, containDuplicateHash);
+
             problems.AddSubMenu(arrays, hash);
             menu.AddSubMenu(problems/*setting*/);
             menu.Show();
