@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CFAFF4DF-DECC-428E-B9B3-0FC5F35E940E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>LeetCodeSolutions</RootNamespace>
-    <AssemblyName>LeetCodeSolutions</AssemblyName>
+    <ProjectGuid>{7C0EC18E-69C1-40BA-A405-D2CE6893DEC8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Menu</RootNamespace>
+    <AssemblyName>Menu</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,23 +32,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arrays\217_ContainsDuplicates.cs" />
-    <Compile Include="Arrays\ArrayFunctions.cs" />
-    <Compile Include="Arrays\1480_RunningSum.cs" />
-    <Compile Include="Arrays\TwoSum1.cs" />
-    <Compile Include="eProblemTypes.cs" />
-    <Compile Include="ProblemData.cs" />
-    <Compile Include="Program.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Menu\Menu.csproj">
-      <Project>{7c0ec18e-69c1-40ba-a405-d2ce6893dec8}</Project>
-      <Name>Menu</Name>
-    </ProjectReference>
+    <Compile Include="ActiveItem.cs" />
+    <Compile Include="eMenuType.cs" />
+    <Compile Include="IClickObserver.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="MenuItem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

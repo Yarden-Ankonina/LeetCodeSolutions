@@ -19,5 +19,12 @@ namespace LeetCodeSolutions.Array
             }
             return runningSum.ToArray();
         }
+
+        public static void Test()
+        {
+            List<int> nums = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
+
+            ArrayFunctions.print1DArray(RunningSum(nums.ToArray()));
+        }
     }
 }

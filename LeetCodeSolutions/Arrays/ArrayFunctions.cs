@@ -16,6 +16,7 @@ namespace LeetCodeSolutions.Array
             {
                 res.Append(arr[i] + ", ");
             }
+            res.Remove(res.Length-2, 2);
             res.Append("]");
             Console.WriteLine(res.ToString());
         }
