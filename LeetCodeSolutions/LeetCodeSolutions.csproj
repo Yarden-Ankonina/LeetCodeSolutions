@@ -40,6 +40,7 @@
     <Compile Include="Arrays\ArrayFunctions.cs" />
     <Compile Include="Arrays\1480_RunningSum.cs" />
     <Compile Include="Arrays\1_TwoSum.cs" />
+    <Compile Include="Arrays\242_ValidAnagram.cs" />
     <Compile Include="eProblemTypes.cs" />
     <Compile Include="MenuCreator.cs" />
     <Compile Include="MenuSettings.cs" />
