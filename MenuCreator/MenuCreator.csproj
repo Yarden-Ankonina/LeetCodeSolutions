@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CFAFF4DF-DECC-428E-B9B3-0FC5F35E940E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>LeetCodeSolutions</RootNamespace>
-    <AssemblyName>LeetCodeSolutions</AssemblyName>
+    <ProjectGuid>{C4290B72-3CAF-4789-BD88-789E9FB2E007}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MenuCreator</RootNamespace>
+    <AssemblyName>MenuCreator</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,21 +32,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arrays\217_ContainsDuplicates.cs" />
-    <Compile Include="Arrays\ArrayFunctions.cs" />
-    <Compile Include="Arrays\1480_RunningSum.cs" />
-    <Compile Include="Arrays\TwoSum1.cs" />
-    <Compile Include="Program.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MenuCreator\MenuCreator.csproj">
-      <Project>{c4290b72-3caf-4789-bd88-789e9fb2e007}</Project>
-      <Name>MenuCreator</Name>
-    </ProjectReference>
+    <Compile Include="Array\TwoSum1.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="MenuHandler.cs" />
+    <Compile Include="MenuItem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
