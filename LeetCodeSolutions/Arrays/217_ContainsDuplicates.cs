@@ -28,7 +28,10 @@ namespace LeetCodeSolutions.Arrays
 
         public static void TestBruteForce()
         {
-            List<int> nums = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
+            List<int> nums = new List<int>() { 1, 2, 3, 4, 5, 6, 1 };
+            Console.WriteLine("Original Array :");
+            ArrayFunctions.print1DArray(nums.ToArray());
+            Console.WriteLine("Solution:");
             Console.WriteLine(ContainsDuplicatesBruteForce(nums.ToArray()));
         }
     }

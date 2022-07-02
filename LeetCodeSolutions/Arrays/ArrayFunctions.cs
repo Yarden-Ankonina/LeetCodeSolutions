@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodeSolutions.Array
+namespace LeetCodeSolutions.Arrays
 {
     public static class ArrayFunctions
     {
+
         public static void print1DArray<T>(T[] arr)
         {
             StringBuilder res = new StringBuilder();
@@ -20,6 +21,5 @@ namespace LeetCodeSolutions.Array
             res.Append("]");
             Console.WriteLine(res.ToString());
         }
-
     }
 }

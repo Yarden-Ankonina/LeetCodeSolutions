@@ -41,8 +41,11 @@
     <Compile Include="Arrays\1480_RunningSum.cs" />
     <Compile Include="Arrays\TwoSum1.cs" />
     <Compile Include="eProblemTypes.cs" />
+    <Compile Include="MenuCreator.cs" />
+    <Compile Include="MenuSettings.cs" />
     <Compile Include="ProblemData.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="UserInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Menu\Menu.csproj">

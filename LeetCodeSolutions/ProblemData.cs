@@ -1,4 +1,4 @@
-﻿using LeetCodeSolutions.Array;
+﻿using LeetCodeSolutions.Arrays;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace LeetCodeSolutions
 {
     public class ProblemData
     {
-        public readonly Dictionary<ProblemData, Action> r_ListOfProblems = new Dictionary<ProblemData, Action>();
+        public readonly Dictionary<string, Action> r_ListOfProblems = new Dictionary<string, Action>();
         public string ProblemName { get; set; }
         public eProblemTypes ProblemType { get; set; }
 
@@ -26,9 +26,9 @@ namespace LeetCodeSolutions
 
         private void createProblemList()
         {
-            ProblemData problem = new ProblemData();
-            problem.UpdateProblem("_1480_RunningSum", eProblemTypes.Array);
-            r_ListOfProblems.Add(problem, new Action(_1480_RunningSum.Test));
+            ProblemData runningSum = new ProblemData();
+            runningSum.UpdateProblem("_1480_RunningSum", eProblemTypes.Array);
+            r_ListOfProblems.Add(runningSum.ProblemName, new Action(_1480_RunningSum.Test));
         }
     }
 }

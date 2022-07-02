@@ -9,9 +9,9 @@ namespace LeetCodeSolutions
 
         static void Main(string[] args)
         {
-            
+            MenuCreator menu = new MenuCreator();
+            menu.DisplayMenu();
         }
-
        
     }
 }
