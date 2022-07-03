@@ -23,16 +23,22 @@ namespace LeetCodeSolutions
             MenuItem twoSumHash = new MenuItem("1_TwoSum - Hash", _1_TwoSum.TestHash);
             twoSum.AddSubMenu(twoSumBrute, twoSumHash);
 
+            MenuItem validPalindrome = new MenuItem("125_ValidPalindrome", _125_ValidPalindrome.Test);
+
             MenuItem containDuplicates = new MenuItem("217_ContainsDuplicates");
             MenuItem containDuplicateBrute = new MenuItem("217_ContainsDuplicates - Brute", _217_ContainsDuplicates.TestBruteForce);
             MenuItem containDuplicateSorting = new MenuItem("217_ContainsDuplicates - Sort", _217_ContainsDuplicates.TestSort);
             MenuItem containDuplicateHash = new MenuItem("217_ContainsDuplicates - Hashset", _217_ContainsDuplicates.TestHash);
             containDuplicates.AddSubMenu(containDuplicateBrute, containDuplicateSorting, containDuplicateHash);
 
-            MenuItem validAnagram = new MenuItem("242_ValidAnagram", _242_ValidAnagram.Test);
+            MenuItem validAnagram = new MenuItem("242_ValidAnagram");
+            MenuItem validAnagramSort = new MenuItem("242_ValidAnagram - Sort", _242_ValidAnagram.TestSort);
+            MenuItem validAnagramCount = new MenuItem("242_ValidAnagram - Letter Count", _242_ValidAnagram.TestCountLetters);
+            validAnagram.AddSubMenu(validAnagramSort, validAnagramCount);
             MenuItem runningSum = new MenuItem("1480_RunningSum", _1480_RunningSum.Test);
 
-            arraysAndHashing.AddSubMenu(twoSum, containDuplicates,
+
+            arraysAndHashing.AddSubMenu(twoSum, validPalindrome, containDuplicates,
                 validAnagram, runningSum);
 
             //MenuItem settings = new MenuItem("Settings");

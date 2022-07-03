@@ -36,6 +36,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arrays\125_ValidPalindrome.cs" />
     <Compile Include="Arrays\217_ContainsDuplicates.cs" />
     <Compile Include="Arrays\ArrayFunctions.cs" />
     <Compile Include="Arrays\1480_RunningSum.cs" />
